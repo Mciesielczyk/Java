@@ -1,0 +1,4 @@
+javac -d out .\src\HelloAnonymousWorld.java
+java HelloAnonymousWorld
+java HelloWorld.java
+javac -d .\out\production\untitled\ .\src\efs\manyfiles\*.java
