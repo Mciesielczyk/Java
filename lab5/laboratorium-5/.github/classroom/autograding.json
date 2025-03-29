@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "name": "code compiles",
+      "setup": "",
+      "run": "mvn -B --quiet compile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "data are load correctly",
+      "run": "mvn -B --quiet -Dtest=efs.task.collections.data.DataProviderTest test",
+      "output": "",
+      "comparison": "included",
+      "points": 9
+    },
+    {
+      "name": "game lobby all tests",
+      "run": "mvn -B --quiet -Dtest=efs.task.collections.game.GameLobbyTest test",
+      "output": "",
+      "comparison": "included",
+      "points": 30
+    }
+  ]
+}
