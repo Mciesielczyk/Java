@@ -24,14 +24,11 @@ package efs.task.collections.data;
            parts = s.split(DATA_SEPARATOR);
              List<String> hero = new ArrayList<>();
              for(int i=1; i<3;i++){
-                 hero.add(parts[i]);
+                 hero.add(parts[i].trim());
              }
-
-             Town town = new Town(parts[0], hero);
+             Town town = new Town(parts[0].trim(), hero);
              towns.add(town);
         }
-
-
          return towns;
      }
  
@@ -44,10 +41,9 @@ package efs.task.collections.data;
              parts = s.split(DATA_SEPARATOR);
              List<String> hero = new ArrayList<>();
              for(int i=1; i<3;i++){
-                 hero.add(parts[i]);
+                 hero.add(parts[i].trim());
              }
-
-             Town town = new Town(parts[0], hero);
+             Town town = new Town(parts[0].trim(), hero);
              towns.add(town);
          }
 
@@ -59,20 +55,15 @@ package efs.task.collections.data;
      // Korzystając z funkcji split() oraz DATA_SEPARATOR utwórz listę unikalnych obiektów efs.task.collections.entities.Hero.
      // UWAGA w Data.baseCharactersArray niektórzy bohaterowie powtarzają się, do porównania bohaterów używamy zarówno imie jak i jego klasę;
      public Set<Hero> getHeroesSet() {
-
          Set<Hero> hero = new HashSet<Hero>();
          String[] A = Data.baseCharactersArray;
          String[] parts;
          for(String s :A){
              parts = s.split(DATA_SEPARATOR);
-
-             Hero hero1 = new Hero(parts[0], parts[1]);
+             Hero hero1 = new Hero(parts[0].trim(), parts[1].trim());
              hero.add(hero1);
          }
-
-
          return hero;
-
      }
  
      //TODO Analogicznie do getHeroesSet utwórz listę bohaterów na podstawie tablicy Data.DLCCharactersArray
@@ -83,7 +74,7 @@ package efs.task.collections.data;
          for(String s :A){
              parts = s.split(DATA_SEPARATOR);
 
-             Hero hero1 = new Hero(parts[0], parts[1]);
+             Hero hero1 = new Hero(parts[0].trim(), parts[1].trim());
              hero.add(hero1);
          }
 
