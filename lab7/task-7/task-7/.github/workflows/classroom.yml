@@ -1,0 +1,20 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+jobs:
+  build:
+    name: Autograding
+
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: 'Set Java 17 with Maven cache'
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # Check supported distributions at https://github.com/marketplace/actions/setup-java-jdk
+          java-version: '17'
+          cache: 'maven'
+      - name: Autograding
+        uses: DrErickson/autograding@v2.1.1
+        

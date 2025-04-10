@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "name": "code compiles",
+      "setup": "",
+      "run": "mvn -B --quiet compile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "ProductTest",
+      "run": "mvn -B --quiet -Dtest=efs.task.reflection.json.ProductTest test",
+      "output": "",
+      "comparison": "included",
+      "points": 110
+    },
+    {
+      "name": "ClassInspectorTest",
+      "run": "mvn -B --quiet -Dtest=efs.task.reflection.ClassInspectorTest test",
+      "output": "",
+      "comparison": "included",
+      "points": 50
+    },
+    {
+      "name": "AnnotationsTest",
+      "run": "mvn -B --quiet -Dtest=efs.task.reflection.annotations.AnnotationsTest test",
+      "output": "",
+      "comparison": "included",
+      "points": 20
+    }
+  ]
+}

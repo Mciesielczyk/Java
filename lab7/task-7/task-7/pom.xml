@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>efs</groupId>
+    <artifactId>efs-main-template</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <project.java.version>17</project.java.version>
+        <maven.compiler.release>${project.java.version}</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <version.plugin.maven.compiler>3.9.0</version.plugin.maven.compiler>
+        <version.plugin.maven.surefire>3.0.0-M9</version.plugin.maven.surefire>
+        
+        <version.depenency.jackson.databind>2.14.2</version.depenency.jackson.databind>
+        <version.depenency.junit.jupiter>5.9.2</version.depenency.junit.jupiter>
+        <version.depenency.assertj.core>3.24.2</version.depenency.assertj.core>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${version.depenency.jackson.databind}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${version.depenency.junit.jupiter}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${version.depenency.assertj.core}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.plugin.maven.compiler}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${version.plugin.maven.surefire}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
