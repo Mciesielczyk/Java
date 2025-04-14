@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "name": "code compiles",
+      "setup": "",
+      "run": "mvn -B --quiet compile",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "FitCalculatorTest all test pass",
+      "run": "mvn -B --quiet -Dtest=efs.task.unittests.FitCalculatorTest test",
+      "output": "",
+      "comparison": "included",
+      "points": 10
+    },
+    {
+      "name": "PlannerTest all tests pass",
+      "run": "mvn -B --quiet -Dtest=efs.task.unittests.PlannerTest test",
+      "output": "",
+      "comparison": "included",
+      "points": 10
+    },
+    {
+      "name": "met minimum code coverage",
+      "run": "mvn -B --quiet verify",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    }
+  ]
+}
